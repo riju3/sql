@@ -1,0 +1,18 @@
+
+create table PRODUCT (Prod_Id varchar(10) primary key, Prod_name varchar(20), Qty number(10), Cost_Price number(10), Sale_price number(10))
+insert into PRODUCT values('P001', 'T-SHIRT', 500, 2000, 3000)
+insert into PRODUCT values('P002', 'SKIRT', 300, 1500, 2900)
+insert into PRODUCT values('P003', 'FROCK', 500, 2000, 3000)
+insert into PRODUCT values('P004', 'TOP', 1000, 1000, 1800)
+insert into PRODUCT values('P005', 'JEANS', 500, 3500, 5000)
+desc PRODUCT
+select * from PRODUCT
+SELECT * FROM PRODUCT ORDER BY Prod_Id DESC;
+UPDATE PRODUCT SET Sale_Price = 4200 WHERE Prod_Id = 'P005';
+DELETE FROM PRODUCT WHERE Prod_Id = 'P003';
+ALTER TABLE PRODUCT ADD Color VARCHAR(20);
+INSERT INTO PRODUCT (Prod_Id, Prod_name, Qty, Cost_Price, Sale_Price, Color) VALUES ('P007', 'Jackets', 200, NULL, NULL, 'Gray');
+SELECT * FROM PRODUCT WHERE Cost_Price > 1500;
+ALTER TABLE PRODUCT MODIFY Sale_Price NUMBER(7,2);
+ALTER TABLE PRODUCT RENAME TO ITEM;
+DELETE FROM PRODUCT;
